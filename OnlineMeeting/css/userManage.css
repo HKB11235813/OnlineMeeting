@@ -1,0 +1,20 @@
+/*新增用户Dialog*/
+.addUserTitle{
+	background-color: #337ab7;
+	border-radius: 3px;
+}
+.addUserTitle h4{
+	color: white !important;
+}
+.addUserTitle span{
+	color: white;
+	font-size: 30px !important;
+}
+.addUserForm label{
+	font-size: 14px;
+	text-align: center;
+	color: #264495;
+}
+.addUserForm>div{
+	padding: 0px 20px;
+}

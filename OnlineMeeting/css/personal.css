@@ -1,0 +1,174 @@
+.colorforhead{
+	color: #a7a7a7;
+}
+
+.coloroff{
+	color: #7e7e7e;
+}
+.colorwhite{
+	color:#fff;
+}
+
+.fs12{
+	font-size: 12px;
+}
+.fs14{
+	font-size: 14px;
+}
+.mt55{
+	margin-top: 55px;
+}
+.mt10{
+	margin-top: 10px;
+}
+.pt5{
+	padding-top: 5px;
+}
+.mt36{
+	margin-top: 36px;
+}
+.mt50{
+	margin-top: 50px;
+}
+.pt10{
+	padding-top: 10px;
+}
+
+.center{
+	text-align: center;
+}
+/**/
+.mui-content-padded {
+    margin: 0 0 0 0;
+}
+/*个人中心-抵用券*/
+.mui-segmented-control {
+	text-align: center;
+    font-size: 14px;
+    position: relative;
+    table-layout: fixed;
+    border: 1px solid #FF6731;
+    border-radius: 3px;
+    background-color: transparent;
+    -webkit-touch-callout: none;
+}
+.mui-segmented-control .mui-control-item.mui-active {
+    color: #fff;
+    background-color: #FF6731;
+}
+.mui-segmented-control .mui-control-item {
+    line-height: 32px;
+    display: table-cell;
+    overflow: hidden;
+    width: 1%;
+    -webkit-transition: background-color .1s linear;
+    transition: background-color .1s linear;
+    text-align: center;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    color: #FF6731;
+    border-color: #FF6731;
+    border-left: 1px solid #FF6731;
+}
+
+
+.voucher-body img{
+	padding-left: 35%;
+	padding-top: 55%;
+}
+.voucher-body p{
+	text-align: center;
+}
+
+/*订单部分*/
+
+.mui-slider-indicator.mui-segmented-control{
+	background: #fff;	
+}
+.mui-segmented-control.mui-segmented-control-inverted .mui-control-item.mui-active {
+    color: #FF6731;
+    border-bottom: 2px solid #FF6731;
+    background: 0 0;
+}
+.order-body-order img{
+	padding-top: 40%;
+	padding-left: 42%;
+}
+.order-body-order p{
+	text-align: center;
+}
+
+
+/*个人中心-首页*/
+.mui-title{
+	line-height:24px;
+	text-align: center;
+}
+.mui-title .center{
+ 	width: 100px;
+ 	margin-left: 33%;
+ }
+.personal-head{
+	width: 75px;
+	height: 75px;
+	background: #fff;
+	border-radius: 50%;
+	margin-left: 38%;
+}
+.mui-bar .mui-title .mui-icon{
+	margin-top: 9px;
+	font-size: 55px;
+    position: relative;
+    z-index: 20;
+}
+.log-reg{
+	margin-top: 8px;
+	margin-left: 38%;
+	width: 82px;
+	height: 24px;
+	border: 1px solid #fff;
+}
+.log-reg a{
+	font-size: 14px;
+	
+}
+
+/*个人中心-首页（登陆状态）*/
+
+.islogin{
+	background: #ff6700;
+	margin-top: 6px;
+	margin-left: 30%;
+	width: 140px;
+	height: 40px;
+}
+.islogin a{
+	font-size: 14px;
+	
+}
+
+
+/*个人资料*/
+.person-title{
+	display: block;
+	float: left;
+	padding: 9px 20px 8px 5px;
+	font-size: 15px;
+	width: 70px;
+}
+.person-input{
+	float: left;
+	width: 70% !important;
+	display: block;
+	padding: 4px 10px;
+	font-size: 15px;
+	margin-bottom: 0px !important;
+	border: 0px !important;
+}
+.mui-table-view-cell select{
+	padding-top: 8px;
+	padding-left: 15px;
+}
+.foot .person-title{
+	width: 100px;
+}

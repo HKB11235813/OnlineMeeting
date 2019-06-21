@@ -1,0 +1,119 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+	    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+	    <title>个人资料</title>
+	    <link href="css/mui.min.css" rel="stylesheet"/>
+	    <!--引入共用样式-->
+	    <link rel="stylesheet" type="text/css" href="css/componments.css"/>
+	    <link rel="stylesheet" type="text/css" href="./css/bootstrap.min.css"/>
+	    <link rel="stylesheet" type="text/css" href="css/mui.css"/>
+	    <!--引入当前页面的样式-->
+	    <link rel="stylesheet" type="text/css" href="css/personal.css"/>
+	    <link rel="stylesheet" type="text/css" href="css/chatHall.css"/>
+	</head>
+
+	<body>
+		<header class="mui-bar mui-bar-nav white shaowno header-bg" style="background: linear-gradient(90deg,#1d45a9,#0c1e34); height: 165px;">
+			<a class="goback mui-icon mui-icon-left-nav mui-pull-left" style="color: #fff;" href="personalData.html" >
+				<span style="font-size: 16px;">返回</span>
+			</a>
+			<a class="goback mui-icon mui-pull-right preserve" style="margin-right:10px;color: #fff;">
+				<span style="font-size: 16px;">保存</span>
+			</a>
+			<div class="mui-title pt10">
+		  		<div class="personal-head" id="titleImg"></div>
+		  		<input type="file" onchange="preview(this)" id="fileClick" accept="image/jpeg"/>
+		  		
+	  	  		<div class="titleroleName">
+	  	  			<p class="name"></p>
+	  	  		</div>
+		 	</div>
+		</header>
+	
+		<!--内容主体部分-->
+		<div class="mui-content" style="margin-top: 121px;">
+			<div class="head">
+				<ul class="mui-table-view">
+				  <li class="mui-table-view-cell">
+				    <label class="person-title">昵称</label>
+				    <input class="person-input" id="personName" type="text"/>
+				  </li>
+				  <li class="mui-table-view-cell">
+				    <label class="person-title">性别</label>
+				    <select class="person-input" id="sex">
+				    	<option value="男">男</option>
+				    	<option value="女">女</option>
+				    	<option value="其他">其他</option>
+				    </select>
+				  </li>
+				  <li class="mui-table-view-cell">
+				    <label class="person-title">生日</label>
+				    <input class="person-input" type="date" id="birthday"/>
+				  </li>
+				</ul>
+			</div>
+			
+			<div class="body mt10">
+				<ul class="mui-table-view">
+				  <li class="mui-table-view-cell">
+				    <label class="person-title">电话</label>
+				    <input class="person-input" id="tellphone" type="tel"/>
+				  </li>
+				  <li class="mui-table-view-cell">
+				    <label class="person-title">邮箱</label>
+				    <input class="person-input" id="email" type="email"/>
+				  </li>
+				  <li class="mui-table-view-cell">
+				    <label class="person-title">家乡</label>
+				    <input class="person-input" id="hometown" type="text"/>
+				  </li>
+				  <li class="mui-table-view-cell">
+				    <label class="person-title">学校</label>
+				    <input class="person-input" id="school" type="text"/>
+				  </li>
+				</ul>
+			</div>
+			
+			<div class="foot mt10">
+				<ul class="mui-table-view">
+				  <li class="mui-table-view-cell">
+				    <label class="person-title">个人说明</label>
+				    <textarea class="person-input" id="personIntro"></textarea>
+				  </li>
+				</ul>
+			</div>
+		</div>
+		
+		<!--dialog增加用户信息提示部分-->
+		<div id="addUserAlertDialog" class="modal" tabindex="-1" role="dialog">
+		  <div class="modal-dialog" role="document">
+		    <div class="modal-content">
+		      <div class="modal-header">
+		        <h5 class="modal-title">编辑用户提示</h5>
+		        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+		          <span aria-hidden="true">&times;</span>
+		        </button>
+		      </div>
+		      <div class="modal-body">
+		        <p class="modalAlert addUserAlert"></p>
+		      </div>
+		      <div class="modal-footer">
+		        <button type="button" class="btn btn-primary" data-dismiss="modal">关闭</button>
+		      </div>
+		    </div>
+		  </div>
+		</div>
+		
+		
+		<script src="js/jquery.js" type="text/javascript" charset="utf-8"></script>
+	  	<script src="js/jquery-1.11.0.js" type="text/javascript" charset="utf-8"></script>
+	 	<script src="./js/bootstrap.min.js" type="text/javascript" charset="utf-8"></script>
+	  	<script src="js/mui.min.js" type="text/javascript" charset="utf-8"></script>
+	 	<script src="js/template-web.js" type="text/javascript" charset="utf-8"></script>
+	 	<script src="js/main.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/personalData.js" type="text/javascript" charset="utf-8"></script>
+	</body>
+
+</html>

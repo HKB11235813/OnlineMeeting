@@ -1,0 +1,247 @@
+.body-content-right{
+	display: none;
+}
+#allMeetingBody .btn-togfunc{
+	margin-top: 20px;
+	padding: 8% 0 0 5%;
+}
+#allMeetingBody .body-content{
+	margin-top: 5px !important;
+}
+#allMeetingBody .btn-togfunc button{
+	color: #FFFFFF;
+    background-color: #183a88;
+}
+@media only screen and (min-width: 388px) and (max-width: 532px) {
+	.delSearch .createTime{
+		padding-top: 10px;
+	}
+}
+/*新增用户Dialog*/
+.addUserTitle{
+	background-color: #337ab7;
+	border-radius: 3px;
+}
+.addUserTitle h4{
+	color: white !important;
+}
+.addUserTitle span{
+	color: white;
+	font-size: 30px !important;
+}
+.addUserForm label{
+	font-size: 14px;
+	text-align: center;
+	color: #264495;
+}
+.addUserForm>div{
+	padding: 0px 20px;
+}
+/**第二部分分页***/
+#pagination1 span{
+	color: #4D7AFE;
+	font-size: 13px;
+	margin-right: 20px;
+}
+#pagination1 .pageLast1,.pageNext1{
+	border:none;
+	color: #fff;
+	font-size: 13px;
+}
+#pagination1 input{
+	font-size: 13px;
+	color: #4D7AFE;
+	height: 27px;
+	width: 30px;
+	border-radius: 1px;
+	text-align: center;
+}
+#pagination1 .goPage1{
+	height: 29px;
+	color: #255625;
+}
+/*****若宽度大于了500，则显示不完全***/
+@media only screen and (min-width: 500px) and (max-width: 1960px) {
+	.body-content-right{
+		height: auto;
+		margin-bottom: 100px;
+	}
+}
+/*****新增问卷列表*****/
+.addUserForm .questionTable{
+	font-size: 13px !important;
+}
+.myCheckAdd{
+	display: none;
+}
+.myCheckAdd + label{
+    background-color: white;
+    border-radius: 5px;
+    border:1px solid #d3d3d3;
+    width:20px;
+    height:20px;
+    display: inline-block;
+    text-align: center;
+    vertical-align: middle;
+    line-height: 20px;
+}
+.myCheckAdd:checked + label{
+    background-color: #eee;
+}
+.myCheckAdd:checked + label:after{
+    content:"\2714";
+}
+.questionIDListDiv{
+	padding: 10px;
+}
+#questionIDList li{
+	list-style-type: none;
+	margin: 3px;
+	display: inline-block;
+}
+.questionIDListDiv h5{
+	color: white;
+	font-size: 14px;
+	background-color: #337ab7;
+	padding: 10px 10px 10px 20px;
+	font-family: Microsoft YaHei,Arial,sans-serif;
+}
+/******增加问题部分*******/
+.selectLable{
+	padding: 10% 0 0 10%;
+	font-size: 14px;
+    text-align: center;
+    color: #264495;
+}
+
+/*input框中颜色更改*/
+#color-input-red +label{
+	display: block;
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    position: absolute;
+    top: 5px;
+    left: 10px;
+    background: rgba(240, 84, 77, 1);;
+}
+#color-input-red:checked +label::before{
+    display: block;
+    content: "\2714";
+    text-align: center;
+    font-size: 16px;
+    color: white;
+}
+input[type=checkbox]{
+	visibility: hidden;
+}
+#color-input-orange +label{
+    display: block;
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    position: absolute;
+    top: 5px;
+    left: 10px;
+    background: rgba(234, 152, 54, 1);
+}
+ 
+#color-input-orange:checked +label::before{
+    display: block;
+    content: "\2714";
+    text-align: center;
+    font-size: 16px;
+    color: white;
+}
+ 
+#color-input-yellow +label{
+    display: block;
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    position: absolute;
+    top: 5px;
+    left: 10px;
+    background: rgba(230, 192, 58, 1);
+}
+ 
+#color-input-yellow:checked +label::before{
+    display: block;
+    content: "\2714";
+    text-align: center;
+    font-size: 16px;
+    color: white;
+}
+ 
+#color-input-green +label{
+    display: block;
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    position: absolute;
+    top: 5px;
+    left: 10px;
+    background: rgba(95, 189, 65, 1);
+}
+ 
+#color-input-green:checked +label::before{
+    display: block;
+    content: "\2714";
+    text-align: center;
+    font-size: 16px;
+    color: white;
+}
+ 
+#color-input-blue +label{
+    display: block;
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    position: absolute;
+    top: 5px;
+    left: 10px;
+    background: rgba(61, 170, 230, 1); 
+}
+ 
+#color-input-blue:checked +label::before{
+    display: block;
+    content: "\2714";
+    text-align: center;
+    font-size: 16px;
+    color: white;
+}
+ 
+#color-input-purple +label{
+    display: block;
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    position: absolute;
+    top: 5px;
+    left: 10px;
+    background: rgba(195, 122, 211, 1);
+}
+ 
+#color-input-purple:checked +label::before{
+    display: block;
+    content: "\2714";
+    text-align: center;
+    font-size: 16px;
+    color: white;
+}
+/******查看问卷属性*******/
+#lookQuestionnaireList{
+	font-family: Microsoft YaHei,Arial,sans-serif;
+}
+#lookQuestionnaireList .questionTitle{
+	padding: 10px;
+	font-size: 15px;
+	font-weight: 700;
+}
+#lookQuestionnaireList .questionSelect{
+	padding: 0 10px;
+	font-size: 14px;
+}
+#lookQuestionnaireList .questionSelect span{
+	margin-left: 7px;
+}

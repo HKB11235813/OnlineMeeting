@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+    	<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title></title>
+		<!--引入CSS文件
+			1.先引入bootstrap  CSS文件库
+			2.再引入自己写的样式表文件
+		-->
+		<link rel="stylesheet" type="text/css" href="./css/bootstrap.min.css"/>
+		<link rel="stylesheet" type="text/css" href="./css/font-awesome.css"/>		
+		<link rel="stylesheet" type="text/css" href="./css/componments.css"/>
+		<link rel="stylesheet" type="text/css" href="./css/main.css"/>
+		<link rel="stylesheet" type="text/css" href="css/bodymain.css"/>
+		<link rel="stylesheet" type="text/css" href="css/mui.css"/>
+	</head>
+	<body>
+		<div class="wrapper">
+			<!--第一个部分：头部   需要使用固定定位-->
+			<div class="container-fluid header-bg fontwhite" id="header">
+				<!--logo-->
+				<div class="logo pull-left">
+					<img src="./img/logo.png"/>
+					<strong class="font18">情况研讨系统</strong>
+				</div>
+				<!--菜单-->
+				<i class="fa fa-bars pull-left menu"></i>
+			</div>
+			
+			<!--第二个部分  菜单栏-->
+			<div id="sider-menu" class="white-bg container-fluid">
+				<!--人物部分-->
+				<div class="user-info">
+					<div class="pull-left">
+						<span class="btn-group" role="group"><span class="name"></span>
+							<i class="fa fa-caret-down" id="btnGroupDrop1" type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+							</i>
+							<div class="dropdown-menu" aria-labelledby="btnGroupDrop1">
+						      <a class="dropdown-item" href="index.html">安全退出</a>
+						   </div>
+						</span>
+						<p class="roleName"></p>
+					</div>
+					<div class="clearfix"></div>
+				</div>
+				
+				<!--主菜单部分-->
+				<div class="main-menu">
+					<ul class="list-unstyled" id="mainmenu">
+						<li class="active">
+							<a href="mainbody.html">
+								<i class="fa fa-home"></i>
+								<span>首页</span>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<i class="fa fa-newspaper-o"></i>
+								<span>会议管理</span>
+								<i class="fa fa-plus pull-right"></i>
+							</a>
+							<ul class="submenu">
+								<li class="allMeeting"><a href="allMeeting.html">全部会议</a></li>
+								<li class="meetingAbstract"><a href="meetingAbstract.html">会议纪要</a></li>
+								<li class="createMeeting"><a href="createMeeting.html">创建会议</a></li>
+							</ul>
+						</li>
+						<li>
+							<a href="#">
+								<i class="fa fa-suitcase"></i>
+								<span>工具管理</span>
+								<i class="fa fa-plus pull-right"></i>
+							</a>
+							<ul class="submenu">
+								<li class="delphiTool"><a href="delphiTool.html">德尔菲</a></li>
+								<li class="swotPage"><a href="swotPage.html">SWOT</a></li>
+								<li class="competeHypothes"><a href="competeHypothes.html">竞争性假设</a></li>
+								<li class="toolUsage"><a href="toolUsage.html">工具使用情况</a></li>
+							</ul>
+						</li>
+						<li>
+							<a href="#">
+								<i class="fa fa-comments-o"></i>
+								<span>数据管理</span>
+								<i class="fa fa-plus pull-right"></i>
+							</a>
+							<ul class="submenu">
+								<li class="messageData"><a href="messageData.html">报文数据</a></li>
+								<li class="multiMediaData"><a href="multiMediaData.html">多媒体数据</a></li>
+								<li class="experData"><a href="experData.html">外部专家数据</a></li>
+								<li class="voiceWhiteboardData"><a href="voiceWhiteboardData.html">语音白板数据</a></li>
+								<li class="historyData"><a href="historyData.html">历史会议数据</a></li>
+								<li class="otherData"><a href="otherData.html">其他数据</a></li>
+							</ul>
+						</li>
+						<li>
+							<a href="#">
+								<i class="fa fa-group"></i>
+								<span>系统管理</span>
+								<i class="fa fa-plus pull-right"></i>
+							</a>
+							<ul class="submenu">
+								<li class="loginLog"><a href="loginLog.html">登录日志</a></li>
+								<li class="businessLog"><a href="businessLog.html">业务日制</a></li>
+								<li class="venueManage"><a href="venueManage.html">地址管理</a></li>
+								<li class="userManage"><a href="userManage.html">用户管理</a></li>
+								<li class="roleManage"><a href="roleManage.html">角色管理</a></li>
+								<li class="domainWeightManage"><a href="domainWeightManage.html">领域管理</a></li>
+							</ul>
+						</li>
+					</ul>
+				</div>
+			</div>
+
+			<!--主题部分-->
+			<div id="body-menu">
+				<!--第一个部分：正在会议-->
+				<div class="container-fluid body-son">
+					<div class="title fontwhite">
+						正在会议
+					</div>
+					<div class="content" id="doingMeeting">						
+						<!--<ul>
+							<li>
+								<p>会议名称：测试单客户端会议</p>
+								<p>会议简介：测试单客户端</p>
+								<p>主持人：超级管理员</p>
+								<p>会议时间：2019-03-19 20:00 至 2019-03-19 22:00</p>
+								<p class="button">
+									<button type="button" class="btn btn-primary">参加会议</button>
+									<button type="button" class="btn btn-danger">结束会议</button>
+								</p>
+							</li>
+						</ul>-->
+					</div>
+				</div>
+				
+				<!--第二个部分：其他会议-->
+				<div class="container-fluid body-son">
+					<div class="title fontwhite">
+						其他会议
+					</div>
+					<div class="content" id="endingMeeting">
+						<!--<ul>
+							<li>
+								<p>会议名称：测试单客户端会议</p>
+								<p>会议简介：测试单客户端</p>
+								<p>主持人：超级管理员</p>
+								<p>会议时间：2019-03-19 20:00 至 2019-03-19 22:00</p>
+								<p class="button">
+									<button type="button" class="btn btn-primary">参加会议</button>
+									<button type="button" class="btn btn-danger">结束会议</button>
+								</p>
+							</li>
+						</ul>-->
+					</div>
+				</div>
+				
+				<!--第三个部分：待开会议 -->
+				<div class="container-fluid body-son lastPartMeeting">
+					<div class="title fontwhite">
+						待开会议
+					</div>
+					<div class="content" id="pendingMeeting">						
+						<!--ajaxs数据传输-->
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		<!--dialog结束会议信息提示部分1:带刷新-->
+		<div id="closeMeetingDialog1" class="modal" tabindex="-1" role="dialog">
+		  <div class="modal-dialog" role="document">
+		    <div class="modal-content">
+		      <div class="modal-header">
+		        <h5 class="modal-title">结束会议信息提示</h5>
+		        <button type="button" onclick="location.reload()" class="close" data-dismiss="modal" aria-label="Close">
+		          <span aria-hidden="true">&times;</span>
+		        </button>
+		      </div>
+		      <div class="modal-body">
+		        <p class="modalAlert closeMeetingAlert1"></p>
+		      </div>
+		      <div class="modal-footer">
+		        <button type="button" onclick="location.reload()" class="btn btn-primary" data-dismiss="modal">关闭</button>
+		      </div>
+		    </div>
+		  </div>
+		</div>
+		<!--dialog会议信息提示部分2-->
+		<div id="closeMeetingDialog" class="modal" tabindex="-1" role="dialog">
+		  <div class="modal-dialog" role="document">
+		    <div class="modal-content">
+		      <div class="modal-header">
+		        <h5 class="modal-title">结束会议信息提示</h5>
+		        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+		          <span aria-hidden="true">&times;</span>
+		        </button>
+		      </div>
+		      <div class="modal-body">
+		        <p class="modalAlert closeMeetingAlert"></p>
+		      </div>
+		      <div class="modal-footer">
+		        <button type="button" class="btn btn-primary" data-dismiss="modal">关闭</button>
+		      </div>
+		    </div>
+		  </div>
+		</div>
+		
+		<!--底部菜单-->
+		<nav class="mui-bar mui-bar-tab">
+		    <a class="mui-tab-item mui-active" href="mainbody.html">
+		        <span class="mui-icon mui-icon-home"></span>
+		        <span class="mui-tab-label">首页</span>
+		    </a>
+		    <a class="mui-tab-item" href="chatHall.html">
+		        <span class="mui-icon mui-icon-chatbubble"></span>
+		        <span class="mui-tab-label">聊天室</span>
+		    </a>
+		     <a class="mui-tab-item" href="personalData.html">
+		        <span class="mui-icon mui-icon-contact"></span>
+		        <span class="mui-tab-label">我</span>
+		    </a>
+		</nav>
+		
+		
+		<!--
+			后期使用的js库
+			
+				先引入jquery库    主要是bootstrap.min.js依赖于jquery.js
+				再引入bootstrap.min.js
+		-->
+		<script src="./js/jquery.js" type="text/javascript" charset="utf-8"></script>
+		<script src="./js/bootstrap.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/mui.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/mui.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="./js/main.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/mainbody.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/roleMenu.js" type="text/javascript" charset="utf-8"></script>
+	</body>
+</html>

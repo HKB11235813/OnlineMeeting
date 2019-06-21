@@ -1,0 +1,341 @@
+/*公用组件：
+ * 作用：制作 一个全局基本组件库，后期需要使用到的样式，都放在这里面
+ * 
+ * 注意：
+ * 	建议使用分类形式设计开发：
+ * 	
+ * 如：margin相关的内容
+ * 	.mt-20{
+ * 	margin-top:20px;
+ * }
+ * 
+ * */
+body{
+	font-family: "宋体";
+	background: #f5f5f5;
+	/*body高度自适应方案*/
+	position:absolute;
+	top:0;
+	bottom:0;
+	left:0;
+	right:0;
+	width:100%;
+	height:100%;
+}
+
+.wrapper{
+	height: 100%;
+	width: 100%;
+}
+
+
+
+/*外边距*/
+.mauto{
+	margin:0 auto;
+}
+.mt42{
+	margin-top:42px;
+}
+.mb30{
+	margin-bottom:30px;
+}
+.mb20{
+	margin-bottom:20px;
+}
+.mb{
+	margin-bottom:50px;
+}
+.ml0{
+	margin-left:0 !important;
+}
+.mb10{
+	margin-bottom: 10px;
+}
+/*内边距*/
+.padding{
+	padding:20px;
+}
+.plr{
+	padding:0 15px;
+}
+.p15{
+	padding:10px 15px;
+}
+.fl{
+	float: left;
+}
+.fr{
+	float: right;
+}
+.tl{
+	text-align: left;
+}
+.tr{
+	text-align: right;
+}
+/*
+ 字体相关*/
+.font18{
+	font-size: 18px;
+}
+.font14{
+	font-size: 14px;
+}
+.font16{
+	font-size: 16px;
+}
+.font22{
+	font-size:22px;
+}
+.font12{
+	font-size:12px;
+}
+.fontwhite{
+	color:#fff;
+}
+.fontgray{
+	color:#98a6ad;
+}
+.fontpurple{
+	color:#6641E2;
+}
+
+/*背景*/
+.login-bg{
+	background:url(../images/small/bg.jpg) no-repeat;
+	border-top-left-radius: 10px;
+	border-top-right-radius: 10px;
+	background-size: cover;
+}
+.header-bg{
+	background: linear-gradient(90deg,#1d45a9,#0c1e34);
+	
+}
+.white-bg{
+	background: #fff;
+}
+
+.blue-bg{
+	background: #29b6f6;
+}
+.purple-bg{
+	background: #7e57c2;
+}
+.green-bg{
+	background: #33b86c;
+}
+.deepblue-bg{
+	background: #317eeb;
+}
+
+
+/*边框*/
+.borderRadius{
+	border:1px solid #ccc;
+	border-radius: 10px;
+}
+
+
+/*主要内容*/
+.content-page{
+	margin-left:240px;
+	position:relative;
+	top:70px;
+}
+.contentbox{
+	overflow: auto;
+    margin-top: 22px;
+    /*position:relative;
+    height:100%;*/
+}
+.breadcrumb{
+	margin-bottom: 0;
+}
+.page-item{
+	border-radius: 5px;
+	padding:20px;
+}
+
+.page-item .title>span{
+	width:60px;
+	height:60px;
+	line-height: 60px;
+	font-size:30px;
+	display: inline-block;
+	background: rgba(255,255,255,0.2);
+}
+.page-item .title strong{
+	font-family: "微软雅黑";
+}
+.page-item>p{
+	margin: 15px 0 0;
+}
+/*页脚 */
+#footer{
+	height:60px;
+	line-height: 60px;
+	background: #f9f9f9;
+	padding-left: 20px;
+	color:#58666e;
+}
+
+
+/*页面导航*/
+.pages-nav{
+	padding: 0 15px;
+	color:#000;
+}
+.pages-nav i{
+	padding:10px 0;
+	
+}
+.breadcrumb{
+	padding:8px 4px;
+}
+.breadcrumb li a{
+	color:#000;
+}
+.breadcrumb>li+li:before{
+	content: ">>";
+	color:#000;
+	padding: 0;
+}
+
+.tabcontent{
+	border:1px solid #ddd;
+	border-color:transparent #ddd #ddd;
+	padding:15px;
+}
+
+.pages{
+	padding:0 15px;
+}
+
+
+/*通用当前页面导航*/
+.nav-pills>li.active>a, .nav-pills>li.active>a:focus, .nav-pills>li.active>a:hover{
+	background-color: #33b86c;
+}
+.nav-pills>li{
+	margin-right:10px;
+}
+
+
+/*表格列表样式*/
+.table-list tr th{
+	background: #d9eaf9;
+	font-weight: normal;
+	text-align: center;
+}
+.table-list tr td{
+	text-align: center;
+}
+.table-list tr td input{
+	width:30px;
+}
+
+
+/*内部table盒子*/
+.tablebox tr th{
+	color:#777;
+	font-weight: normal;
+}
+.tablebox tr td select{
+	height:26px;
+	font-size:12px;
+}
+.tablebox .tips{
+	color:red;
+	font-size:12px;
+}
+.tablebox tr td textarea{
+	width:300px;
+	height:100px;
+}
+
+/*
+ 会员中心顶部提示*/
+.member-top input,.member-top select{
+	height:26px;
+	vertical-align: middle;
+}
+
+/*系统统计*/
+.body-componments{
+	margin-top: 70px;
+	height: 100%;
+	width: 95%;
+	background: whitesmoke;
+	margin-left: 2.5%;
+}
+.body-componments .titleBox{
+	height: auto;
+	padding: 20px 0px;
+	border-bottom: 1px solid red;
+	text-align: center;
+	width:80%;
+	margin:0 auto;
+	border: 0;
+	height: 1px;
+	background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
+}
+.body-componments .titleBox .title{
+	text-align: center;
+	font-family: elephant;
+	font-size: 16px;
+	color: white;
+	padding: 20px 15px;
+	background: linear-gradient(90deg,#1d45a9,#0c1e34);
+	border-radius: 50%;
+}
+
+/*清楚浮动*/
+.clearfix:before, .clearfix:after { display: table; content: " ";}
+.clearfix:after { clear: both;}
+
+/*btn*/
+.btn-file{
+	margin-bottom: 40px;
+}
+.btn-file button{
+	color: #f8f8f8;
+    background-color: #183a88;
+    border-color: #183a88;
+    position: absolute;
+    left: 18px;
+}
+.btn-file input[type="file"]{
+	opacity: 0;
+	position: absolute;
+	top: 4px;
+	left: 15px;
+	padding: 3%;
+}
+
+@media only screen and (min-width: 100px) and (max-width: 400px) {
+	.btn-file{
+		text-align: center;
+		margin-left: 32.5%;
+	}
+}
+
+#meetingSearch{
+	color: #fff;
+	background-color: #337ab7;
+    border-color: #2e6da4;
+}
+
+/**使所有菜单消失,根据角色显示**/
+.submenu li{
+	display: none;
+}
+/*返回标签*/
+.header-bg a:hover{
+	text-decoration: none;
+	cursor: pointer;
+}
+/*button间距**/
+.tableForm tr td button{
+	margin: 1%;
+}

@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+    	<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title></title>
+		<!--引入CSS文件
+			1.先引入bootstrap  CSS文件库
+			2.再引入自己写的样式表文件
+		-->
+		<link rel="stylesheet" type="text/css" href="./css/bootstrap.min.css"/>
+		<link rel="stylesheet" type="text/css" href="./css/font-awesome.css"/>		
+		<link rel="stylesheet" type="text/css" href="./css/componments.css"/>
+		<link rel="stylesheet" type="text/css" href="./css/main.css"/>
+		<link rel="stylesheet" type="text/css" href="css/mui.css"/>
+		<link rel="stylesheet" type="text/css" href="css/mui.min.css"/>
+		<link rel="stylesheet" type="text/css" href="css/allMeeting.css"/>
+	</head>
+	<body>
+		<div class="wrapper">
+			<!--第一个部分：头部   需要使用固定定位-->
+			<div class="container-fluid header-bg fontwhite" id="header">
+				<!--logo-->
+				<div class="logo pull-left">
+					<img src="./img/logo.png"/>
+					<strong class="font18">情况研讨系统</strong>
+				</div>
+				<!--菜单-->
+				<i class="fa fa-bars pull-left menu"></i>
+			</div>
+			
+			<!--第二个部分  菜单栏-->
+			<div id="sider-menu" class="white-bg container-fluid">
+				<!--人物部分-->
+				<div class="user-info">
+					<div class="pull-left">
+						<span class="btn-group" role="group"><span class="name"></span>
+							<i class="fa fa-caret-down" id="btnGroupDrop1" type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+							</i>
+							<div class="dropdown-menu" aria-labelledby="btnGroupDrop1">
+						      <a class="dropdown-item" href="index.html">安全退出</a>
+						   </div>
+						</span>
+						<p class="roleName"></p>
+					</div>
+					<div class="clearfix"></div>
+				</div>
+				
+				<!--主菜单部分-->
+				<div class="main-menu">
+					<ul class="list-unstyled" id="mainmenu">
+						<li class="active">
+							<a href="mainbody.html">
+								<i class="fa fa-home"></i>
+								<span>首页</span>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<i class="fa fa-newspaper-o"></i>
+								<span>会议管理</span>
+								<i class="fa fa-plus pull-right"></i>
+							</a>
+							<ul class="submenu">
+								<li class="allMeeting"><a href="allMeeting.html">全部会议</a></li>
+								<li class="meetingAbstract"><a href="meetingAbstract.html">会议纪要</a></li>
+								<li class="createMeeting"><a href="createMeeting.html">创建会议</a></li>
+							</ul>
+						</li>
+						<li>
+							<a href="#">
+								<i class="fa fa-suitcase"></i>
+								<span>工具管理</span>
+								<i class="fa fa-plus pull-right"></i>
+							</a>
+							<ul class="submenu">
+								<li class="delphiTool"><a href="delphiTool.html">德尔菲</a></li>
+								<li class="swotPage"><a href="swotPage.html">SWOT</a></li>
+								<li class="competeHypothes"><a href="competeHypothes.html">竞争性假设</a></li>
+								<li class="toolUsage"><a href="toolUsage.html">工具使用情况</a></li>
+							</ul>
+						</li>
+						<li>
+							<a href="#">
+								<i class="fa fa-comments-o"></i>
+								<span>数据管理</span>
+								<i class="fa fa-plus pull-right"></i>
+							</a>
+							<ul class="submenu">
+								<li class="messageData"><a href="messageData.html">报文数据</a></li>
+								<li class="multiMediaData"><a href="multiMediaData.html">多媒体数据</a></li>
+								<li class="experData"><a href="experData.html">外部专家数据</a></li>
+								<li class="voiceWhiteboardData"><a href="voiceWhiteboardData.html">语音白板数据</a></li>
+								<li class="historyData"><a href="historyData.html">历史会议数据</a></li>
+								<li class="otherData"><a href="otherData.html">其他数据</a></li>
+							</ul>
+						</li>
+						<li>
+							<a href="#">
+								<i class="fa fa-group"></i>
+								<span>系统管理</span>
+								<i class="fa fa-plus pull-right"></i>
+							</a>
+							<ul class="submenu">
+								<li class="loginLog"><a href="loginLog.html">登录日志</a></li>
+								<li class="businessLog"><a href="businessLog.html">业务日制</a></li>
+								<li class="venueManage"><a href="venueManage.html">地址管理</a></li>
+								<li class="userManage"><a href="userManage.html">用户管理</a></li>
+								<li class="roleManage"><a href="roleManage.html">角色管理</a></li>
+								<li class="domainWeightManage"><a href="domainWeightManage.html">领域管理</a></li>
+							</ul>
+						</li>
+					</ul>
+				</div>
+			</div>
+			
+			
+			<!--主题部分-->
+			<div id="allMeetingBody" class="body-componments">
+				<div class="titleBox">
+					<span class="title">工具使用情况</span>
+				</div>
+				<div class="body-content">
+					<!--描述：搜素部分-->
+					<form class="first-search" id="searchForm">
+						<div class="mui-row">
+							<div class="mui-col-sm-6 mui-col-xs-12">
+								<label class="fl">推送人名</label>
+								<input type="text" class="form-control" aria-label="Text input with segmented dropdown button">
+							</div>
+							<div class="mui-col-sm-6 mui-col-xs-12">
+								<label class="fl">所属会议</label>
+								<select class="mui-select form-control" id="inputGroupSelect03">
+								    <option selected>请选择...</option>
+								    <option value="1">中共十九大</option>
+								    <option value="2">中共十八大</option>
+								    <option value="3">中共十七大</option>
+								    <option value="3">中共十六大</option>
+								 </select>
+							</div>
+						</div>
+						<div class="mui-row">
+							<div class="mui-col-sm-6 mui-col-xs-12">
+								<label class="fl">所属议题</label>
+								<select class="mui-select form-control" id="inputGroupSelect03">
+								    <option selected>请选择...</option>
+								    <option value="1">新一届政治局常委选举</option>
+								    <option value="2">全面推进深化改革</option>
+								    <option value="3">打铁还需自身硬</option>
+								    <option value="3">第一次反围剿</option>
+								 </select>
+							</div>
+							<div class="mui-col-sm-6 mui-col-xs-12">
+								<label class="fl">工具类型</label>
+								<select class="mui-select form-control" id="inputGroupSelect03">
+								    <option selected>请选择...</option>
+								    <option value="1">德尔菲</option>
+								    <option value="2">SWOT</option>
+								    <option value="3">竞争性假设</option>
+								 </select>
+							</div>
+						</div>
+						<div class="mui-row">
+							<div class="mui-col-sm-6 mui-col-xs-12">
+								<label class="fl">推送时间</label>
+								<input type="date" class="form-control" aria-label="Text input with segmented dropdown button">
+							</div>
+						</div>
+						
+						<div class="mui-row search-button">
+							<div class="mui-col-sm-6 mui-col-xs-12">
+								<input class="btn btn-primary" type="submit" value="查询">
+							</div>
+							<div class="mui-col-sm-6 mui-col-xs-12">
+								<input class="btn btn-primary resetButton" type="reset" value="重置">	
+							</div>
+						</div>			
+					</form>
+					
+					<!--描述：表单框-->
+					<div class="tableForm table-responsive">
+						<table class="table table-bordered">
+							 <thead>
+							    <tr class="headerForm">
+							      <th scope="col">推送人</th>
+							      <th scope="col">推送时间</th>
+							      <th scope="col">所属会议</th>
+							      <th scope="col">所属议题</th>
+							      <th scope="col">工具类型</th>
+							      <th scope="col">工具名称</th>
+							      <th scope="col">推送状态</th>
+							      <th scope="col">操作</th>
+							    </tr>
+							  </thead>
+							  <tbody>
+							    <tr>
+							      <th scope="row">1</th>
+							      <td>Mark</td>
+							      <td>Otto</td>
+							      <td>@mdo</td>
+							      <td>Mark</td>
+							      <td>Otto</td>
+							      <td>@mdo</td>
+							      <td>
+							      	<button type="button" class="btn btn-warning">编辑</button>
+							      	<button type="button" class="btn btn-danger">删除</button>	
+							      </td>
+							    </tr>
+							    <tr>
+							      <th scope="row">2</th>
+							      <td>Mark</td>
+							      <td>Otto</td>
+							      <td>@mdo</td>
+							      <td>Mark</td>
+							      <td>Otto</td>
+							      <td>@mdo</td>
+							      <td>
+							      	<button type="button" class="btn btn-warning">编辑</button>
+							      	<button type="button" class="btn btn-danger">删除</button>	
+							      </td>
+							    </tr>
+							    <tr>
+							      <th scope="row">3</th>
+							      <td>Mark</td>
+							      <td>Otto</td>
+							      <td>@mdo</td>
+							      <td>Mark</td>
+							      <td>Otto</td>
+							      <td>@mdo</td>
+							      <td>
+							      	<button type="button" class="btn btn-warning">编辑</button>
+							      	<button type="button" class="btn btn-danger">删除</button>	
+							      </td>
+							    </tr>
+								<tr>
+							      <th scope="row">4</th>
+							      <td>Mark</td>
+							      <td>Otto</td>
+							      <td>@mdo</td>
+							      <td>Mark</td>
+							      <td>Otto</td>
+							      <td>@mdo</td>
+							      <td>
+							      	<button type="button" class="btn btn-warning">编辑</button>
+							      	<button type="button" class="btn btn-danger">删除</button>	
+							      </td>
+							    </tr>
+								<tr>
+							      <th scope="row">5</th>
+							      <td>Mark</td>
+							      <td>Otto</td>
+							      <td>@mdo</td>
+							      <td>Mark</td>
+							      <td>Otto</td>
+							      <td>@mdo</td>
+							      <td>
+							      	<button type="button" class="btn btn-warning">编辑</button>
+							      	<button type="button" class="btn btn-danger">删除</button>	
+							      </td>
+							   </tr>						    
+							    <tr>
+							      <th scope="row">6</th>
+							      <td colspan="2">Larry the Bird</td>
+							      <td>@twitter</td>
+							      <td>Otto</td>
+							      <td>@mdo</td>
+							      <td>@刘鑫</td>
+							      <td>
+							      	<button type="button" class="btn btn-warning">编辑</button>
+							      	<button type="button" class="btn btn-danger">删除</button>	
+							    </tr>
+							  </tbody>
+						</table>
+					</div>
+					
+					<!--描述：分页部分-->				
+					<div class="mui-content-padded formPage">
+						<ul class="mui-pagination">
+							<li class="mui-previous mui-disabled">
+								<a href="#">
+										&laquo;
+									</a>
+							</li>
+							<li class="mui-active">
+								<a href="#">
+										1
+									</a>
+							</li>
+							<li>
+								<a href="#">
+										2
+									</a>
+							</li>
+							<li>
+								<a href="#">
+										3
+									</a>
+							</li>
+							<li>
+								<a href="#">
+										4
+									</a>
+							</li>
+							<li>
+								<a href="#">
+										5
+									</a>
+							</li>
+							<li class="mui-next">
+								<a href="#">
+										&raquo;
+									</a>
+							</li>
+						</ul>
+					</div>	
+				
+				</div>
+			</div>
+			
+		</div>
+		
+		
+		<!--底部菜单-->
+		<nav class="mui-bar mui-bar-tab">
+		    <a class="mui-tab-item mui-active" href="mainbody.html">
+		        <span class="mui-icon mui-icon-home"></span>
+		        <span class="mui-tab-label">首页</span>
+		    </a>
+		    <a class="mui-tab-item" href="chatHall.html">
+		        <span class="mui-icon mui-icon-chatbubble"></span>
+		        <span class="mui-tab-label">聊天室</span>
+		    </a>
+		     <a class="mui-tab-item" href="personalData.html">
+		        <span class="mui-icon mui-icon-contact"></span>
+		        <span class="mui-tab-label">我</span>
+		    </a>
+		</nav>
+		<!--
+			后期使用的js库
+			
+				先引入jquery库    主要是bootstrap.min.js依赖于jquery.js
+				再引入bootstrap.min.js
+		-->
+		<script src="./js/jquery.js" type="text/javascript" charset="utf-8"></script>
+		<script src="./js/bootstrap.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/mui.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/mui.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="./js/main.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/loading.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/roleMenu.js" type="text/javascript" charset="utf-8"></script>
+	</body>
+</html>

@@ -1,0 +1,360 @@
+/******头部样式******/
+.goback{
+	text-decoration:none; 
+}
+.goback:hover{
+	text-decoration:none;
+}
+.meetingTitle{
+	color: #EA0000;
+	font-size: 15px;
+	font-family: "bodoni mt black";
+}
+.meetingMessage{
+	height: auto;
+}
+.meetingMessage h5{
+	color: #fff;
+	background-color: #173b89;
+	padding: 10px 10px 10px 20px;
+	font-family: Microsoft YaHei,Arial,sans-serif;
+}
+.meetingMessage ul li{
+	font-size: 12px;
+	padding: 5px 0px 5px 30px;
+	font-family: Microsoft YaHei,Arial,sans-serif;
+}
+.meetingMessage .enterChart{
+	font-size: 13px;
+	float: right;
+	padding: 0 20px 0 0;
+	cursor: pointer;
+}
+.meetingMessage .enterChart i{
+	font-size: 13px;
+	padding: 2px;
+}
+.meetingContent h5{
+	color: white;
+	font-size: 14px;
+	background-color: #173b89;
+	padding: 10px 10px 10px 20px;
+	font-family: Microsoft YaHei,Arial,sans-serif;
+}
+.meetingContent span{
+	font-size: 13px;
+	float: right;
+	padding: 0 5px;
+	cursor: pointer;
+}
+/******主体部分样式*****/
+#meetingBody{
+	background-color: #fff;
+}
+#meetingBody .leftBody{
+	height: auto;
+	font-family: Microsoft YaHei,Arial,sans-serif;
+}
+#meetingBody .rightBody{
+	font-family: Microsoft YaHei,Arial,sans-serif;
+	height: auto;
+	overflow-y: auto;
+	height: 400px;
+	border-left: 1px solid #ddd;
+}
+#discussionList li{
+	font-size: 12px;
+}
+#discussionList li .operate{
+	text-align: right;
+}
+#discussionList li .operate a{
+	text-decoration: none;
+	padding: 2px;
+}
+#participantsList li{
+	font-size: 12px;
+}
+/*弹出Dialog样式*/
+.addUserTitle{
+	background-color: #337ab7;
+	border-radius: 3px;
+}
+.addUserTitle h4{
+	color: white !important;
+}
+.addUserTitle span{
+	color: white;
+	font-size: 30px !important;
+}
+.addUserForm label{
+	font-size: 14px;
+	text-align: center;
+	color: #264495;
+}
+.addUserForm>div{
+	padding: 0px 20px;
+}
+/*****邀请新人参会的选择样式*****/
+.checkboxFour{
+	width: 15px;
+	height: 15px;
+	background: #ddd;
+	border-radius: 100%;
+	position: relative;
+	-webkit-box-shadow: 0px 1px 3px rgba(0,0,0,0.5);
+	-moz-box-shadow: 0px 1px 3px rgba(0,0,0,0.5);
+	box-shadow: 0px 1px 3px rgba(0,0,0,0.5);
+}
+.checkboxFour label{display: block;
+	width: 15px;
+	height: 15px;
+	border-radius: 100px;
+	-webkit-transition: all .5s ease;
+	-moz-transition: all .5s ease;
+	-o-transition: all .5s ease;
+	-ms-transition: all .5s ease;
+	transition: all .5s ease;
+	cursor: pointer;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	z-index: 1;
+	background: whitesmoke;
+	-webkit-box-shadow:inset 0px 1px 3px rgba(0,0,0,0.5);
+	-moz-box-shadow:inset 0px 1px 3px rgba(0,0,0,0.5);
+	box-shadow:inset 0px 1px 3px rgba(0,0,0,0.5);
+}
+.checkboxFour input[type=checkbox]:checked + label{    
+	background: #007AFF;
+}
+.nameLable{
+	margin-left: 10%;
+}
+.checkboxFour input[type=checkbox]{
+	visibility: hidden;
+}
+/******查看问卷属性*******/
+#lookQuestionnaireList{
+	font-family: Microsoft YaHei,Arial,sans-serif;
+}
+#lookQuestionnaireList .questionTitle{
+	padding: 10px;
+	font-size: 15px;
+	font-weight: 700;
+}
+#lookQuestionnaireList .questionSelect{
+	padding: 0 10px;
+	font-size: 14px;
+}
+#lookQuestionnaireList .questionSelect span{
+	margin-left: 7px;
+}
+/******回答问卷属性*******/
+#answerQuestionnaireList{
+	font-family: Microsoft YaHei,Arial,sans-serif;
+}
+#answerQuestionnaireList .questionTitle{
+	padding: 10px;
+	font-size: 15px;
+	font-weight: 700;
+}
+#answerQuestionnaireList .questionSelect{
+	padding: 0 10px;
+	font-size: 14px;
+}
+#answerQuestionnaireList .questionSelect span{
+	margin-left: 7px;
+}
+/****发布议题部分****/
+.addDiscussionForm{
+	padding: 0px 20px;
+}
+.addDiscussionForm label{
+	font-size: 14px;
+    text-align: center;
+    color: #264495;
+}
+/**************************************回答问卷时的多选框样式********************/
+.checkbox-custom {
+    position: relative;
+    padding: 0 15px 0 25px;
+    margin-bottom: 7px;
+    margin-top: 0;
+    display: inline-block;
+}
+/*
+将初始的checkbox的样式改变
+*/
+.checkbox-custom input[type="checkbox"] {
+    opacity: 0;/*将初始的checkbox隐藏起来*/
+    position: absolute;
+    cursor: pointer;
+    z-index: 2;
+    margin: -6px 0 0 0;
+    top: 50%;
+    left: 3px;
+}
+/*
+设计新的checkbox，位置
+*/
+.checkbox-custom label:before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 0;
+    margin-top: -9px;
+    width: 19px;
+    height: 18px;
+    display: inline-block;
+    border-radius: 2px;
+    border: 1px solid #bbb;
+    background: #fff;
+}
+/*
+点击初始的checkbox，将新的checkbox关联起来
+*/
+.checkbox-custom input[type="checkbox"]:checked +label:after {
+    position: absolute;
+    display: inline-block;
+    font-family: 'Glyphicons Halflings';
+    content: "\e013";
+    top: 42%;
+    left: 3px;
+    margin-top: -5px;
+    font-size: 11px;
+    line-height: 1;
+    width: 16px;
+    height: 16px;
+    color: #333;
+}
+.checkbox-custom label {
+    cursor: pointer;
+    line-height: 1.2;
+    font-weight: normal;/*改变了rememberme的字体*/
+    margin-bottom: 0;
+    text-align: left;
+}
+/**************************************回答问卷时的单选框样式********************/
+.single div{
+  position: relative;
+  line-height: 30px;
+}
+
+.single input[type="radio"] {
+  width: 20px;
+  height: 20px;
+  opacity: 0;
+}
+
+.single label {
+  position: absolute;
+  left: 5px;
+  top: 8px;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 1px solid #999;
+}
+
+/*设置选中的input的样式*/
+/* + 是兄弟选择器,获取选中后的label元素*/
+.single input:checked+label {
+  background-color: #006eb2;
+  border: 1px solid #006eb2;
+}
+.single input:checked+label::after {
+  position: absolute;
+  content: "";
+  width: 5px;
+  height: 10px;
+  top: 3px;
+  left: 6px;
+  border: 2px solid #fff;
+  border-top: none;
+  border-left: none;
+  transform: rotate(45deg)
+}
+.single form span{
+	margin-left: 10px;
+}
+/***********聊天室样式***************/
+.groupChatBox{
+	height: 380px;
+	width: 100%;
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	margin-left: 2px;
+	padding-top: 20px!important;
+	padding-bottom: 20px!important;
+    background-color: #fff;
+    overflow-y: auto;
+}
+#groupChatMessageList span{
+	font-size: 12px;
+}
+.sendingMessage{
+	font-size: 12px;
+}
+#groupChatMessageList .messageTime{
+	text-align: center;
+	font-size: 10px;
+	clear:both;
+}
+#groupChatMessageList img{
+	border-radius: 50%;
+}
+/**对方发信息过来**/
+#groupChatMessageList .sender{
+    clear:both;
+}
+#groupChatMessageList .sender div:nth-of-type(1){
+    float: left;
+}
+#groupChatMessageList .sender div:nth-of-type(2){
+    background-color: aquamarine;
+    float: left;
+    margin: 0 20px 10px 15px;
+    padding: 10px 10px 10px 0px;
+    border-radius:7px;
+}
+/**我发发信息过去**/
+#groupChatMessageList .receiver div:first-child img,
+.sender div:first-child img{
+    width:40px;
+    height:40px;
+}
+ 
+#groupChatMessageList .receiver{
+    clear:both;
+}
+#groupChatMessageList .receiver div:nth-child(1){
+    float: right;
+}
+#groupChatMessageList .receiver div:nth-of-type(2){
+    float:right;
+    background-color: gold;
+    margin: 0 10px 10px 20px;
+    padding: 10px 0px 10px 10px;
+    border-radius:7px;
+}
+#groupChatMessageList .left_triangle{
+    height:0px;  
+    width:0px;  
+    border-width:8px;  
+    border-style:solid;  
+    border-color:transparent aquamarine transparent transparent;  
+    position: relative;
+    left:-16px;
+    top:3px;
+}
+#groupChatMessageList .right_triangle{
+    height:0px;  
+    width:0px;  
+    border-width:8px;  
+    border-style:solid;  
+    border-color:transparent transparent transparent gold;  
+    position: relative;
+    right:-16px;
+    top:3px;
+}

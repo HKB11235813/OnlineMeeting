@@ -1,0 +1,22 @@
+#pagination span{
+	color: #4D7AFE;
+	font-size: 13px;
+	margin-right: 20px;
+}
+#pagination .pageLast,.pageNext{
+	border:none;
+	color: #fff;
+	font-size: 13px;
+}
+#pagination input{
+	font-size: 13px;
+	color: #4D7AFE;
+	height: 27px;
+	width: 30px;
+	border-radius: 1px;
+	text-align: center;
+}
+#pagination .goPage{
+	height: 29px;
+	color: #255625;
+}

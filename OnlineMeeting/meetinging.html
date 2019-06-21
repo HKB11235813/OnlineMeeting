@@ -1,0 +1,350 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+	    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+	    <title>会议室</title>
+	    <link href="css/mui.min.css" rel="stylesheet"/>
+	    <!--引入共用样式-->
+	    <link rel="stylesheet" type="text/css" href="./css/bootstrap.min.css"/>
+		<link rel="stylesheet" type="text/css" href="./css/font-awesome.css"/>		
+		<link rel="stylesheet" type="text/css" href="./css/componments.css"/>
+		<link rel="stylesheet" type="text/css" href="css/mui.css"/>
+		<!--引入当前页面的样式-->
+	    <link rel="stylesheet" type="text/css" href="css/meetingIng.css"/>
+	</head>
+
+	<body>
+		<header class="mui-bar mui-bar-nav white shaowno header-bg" style="background: linear-gradient(90deg,#1d45a9,#0c1e34); height: auto;">
+			<div class="mui-row">
+				<a class="goback mui-icon mui-icon-left-nav mui-pull-left" style="color: #fff;" href="mainbody.html" >
+					<span style="font-size: 16px;">返回</span>
+				</a>
+			</div>
+			<div class="font16" style="margin: 0 10%;">
+				<marquee behavior="scroll">
+					<em><strong><p class="meetingTitle">第十九次人民代表大会：ing...</p></strong></em>
+				</marquee>
+			</div>
+		</header>
+	
+		<!--内容主体部分-->
+		<div class="mui-content" style="margin-top: 33px;">
+			<div class="mui-row meetingMessage">
+				<h5>基本信息
+					<span class="enterChart"><i class="mui-icon mui-icon-chat"></i>聊天室</span>
+				</h5>
+				<div class="mui-row" style="height: 160px;">
+					<ul class="list-group list-group-flush">
+					  <li class="list-group-item">主持人名：<span class="hostName"></span></li>
+					  <li class="list-group-item">会议时间：<span class="meetingTime"></span></li>
+					  <li class="list-group-item">会议地点：<span class="meetingAddress"></span></li>
+					  <li class="list-group-item">会议主题：<span class="meetingTheme"></span></li>
+					  <li class="list-group-item">参会人数：<span class="participantsNum"></span>人</li>
+					</ul>
+				</div>
+			</div>
+			<div class="mui-row meetingContent">
+				<h5>会议内容
+					<span class="inviteParticipant">邀请人员</span>
+					<span class="publicTopic">发布议题</span>
+				</h5>
+				<div class="mui-row" id="meetingBody">
+					<div class="mui-col-sm-8 mui-col-xs-8 leftBody">
+						<ul class="list-group" id="discussionList">
+						  	<!--ajaxs插入数据-->
+						</ul>
+					</div>
+					<div class="mui-col-sm-4 mui-col-xs-4 rightBody">
+						<div class="card">
+						    <div class="card-header" id="headingOne">
+						      <h2 class="mb-0">
+						        <button style="text-decoration: none;" class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+						 			 参会人员
+						        </button>
+						      </h2>
+						    </div>
+						    <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
+						      	<ul class="list-group" id="participantsList">
+									<!--ajaxs插入数据-->
+								</ul>
+						    </div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		
+		<!--dialog邀请人员部分-->
+		<div id="inviteUserDialog" class="modal" tabindex="-1" role="dialog">
+		  <div class="modal-dialog" role="document">
+		    <div class="modal-content">
+		      <!--关闭按钮-->
+		      <div class="modal-header addUserTitle">
+		      	<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+		          <span aria-hidden="true">&times;</span>
+		        </button>
+		        <h4 class="modal-title">邀请新人</h4>
+		      </div>
+		      <!--填入表单-->
+		      <div class="modal-body">
+		        <form class="addUserForm">
+		        	<!--选择会议领域-->
+		            <div class="mb-3 mb10 row">
+		              <label for="userDomain">人员领域</label>
+		              <select onchange="participantsList(this[selectedIndex].value);" class="custom-select d-block w-100 form-control userDomain" id="userDomainList" required>
+		                  <option value="">请选择参会人员领域...</option>
+		              </select>
+		            </div>
+		            <div id="domainUserList" class="row">
+	            		<!--ajaxs传入数据-->
+	            	</div>
+		        </form>
+		      </div>
+		      <div class="modal-footer">
+		      	<button id="inviteUserDialogSure" type="button" class="btn btn-primary" data-dismiss="modal">确定</button>
+		        <button type="button" class="btn btn-danger" data-dismiss="modal">取消</button>
+		      </div>
+		    </div>
+		  </div>
+		</div>
+		
+		<!--dialog统计问卷部分-->
+		<div id="statisticDialog" class="modal" tabindex="-1" role="dialog">
+		  <div class="modal-dialog" role="document">
+		    <div class="modal-content">
+		      <!--关闭按钮-->
+		      <div class="modal-header addUserTitle">
+		      	<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+		          <span aria-hidden="true">&times;</span>
+		        </button>
+		        <h4 class="modal-title answerQuestionnaireName">统计问卷</h4>
+		      </div>
+		      <!--填入表单-->
+		      <div class="modal-body">
+		        <form>
+		        	<ul class="list-group" id="statisticQuestionnaireList">
+						<!--ajaxs插入数据-->
+					</ul>
+		        </form>
+		      </div>
+		      <div class="modal-footer">
+		      	<button type="button" class="btn btn-primary" data-dismiss="modal">确定</button>
+		        <button type="button" class="btn btn-danger" data-dismiss="modal">取消</button>
+		      </div>
+		    </div>
+		  </div>
+		</div>
+		
+		
+		<!--dialog查看预览问卷部分-->
+		<div id="lookQuestionnairDialog" class="modal" tabindex="-1" role="dialog">
+		  <div class="modal-dialog" role="document">
+		    <div class="modal-content">
+		      <!--关闭按钮-->
+		      <div class="modal-header addUserTitle">
+		      	<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+		          <span aria-hidden="true">&times;</span>
+		        </button>
+		        <h4 class="modal-title lookQuestionnaireName">查看问卷</h4>
+		      </div>
+		      <!--填入表单-->
+		      <div class="modal-body">
+		        <form>
+		        	<ul class="list-group" id="lookQuestionnaireList">
+						<!--ajaxs插入数据-->
+					</ul>
+		        </form>
+		      </div>
+		      <div class="modal-footer">
+		      	<button type="button" class="btn btn-primary" data-dismiss="modal">确定</button>
+		        <button type="button" class="btn btn-danger" data-dismiss="modal">取消</button>
+		      </div>
+		    </div>
+		  </div>
+		</div>
+
+		<!--dialog回答问卷部分-->
+		<div id="answerQuestionnairDialog" class="modal" tabindex="-1" role="dialog">
+		  <div class="modal-dialog" role="document">
+		    <div class="modal-content">
+		      <!--关闭按钮-->
+		      <div class="modal-header addUserTitle">
+		      	<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+		          <span aria-hidden="true">&times;</span>
+		        </button>
+		        <h4 class="modal-title answerQuestionnaireName">回答问卷</h4>
+		      </div>
+		      <!--填入表单-->
+		      <div class="modal-body">
+		        <form>
+		        	<ul class="list-group" id="answerQuestionnaireList">
+						<!--ajaxs插入数据-->
+					</ul>
+		        </form>
+		      </div>
+		      <div class="modal-footer">
+		      	<button value="" id="answerQuestionnairDialogSure" type="button" class="btn btn-primary" data-dismiss="modal">提交</button>
+		        <button type="button" class="btn btn-danger" data-dismiss="modal">取消</button>
+		      </div>
+		    </div>
+		  </div>
+		</div>
+
+		<!--dialog发布议题部分-->
+		<div id="publicTopicDialog" class="modal" tabindex="-1" role="dialog">
+		  <div class="modal-dialog" role="document">
+		    <div class="modal-content">
+			    <!--关闭按钮-->
+			    <div class="modal-header addUserTitle">
+			      	<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+			          <span aria-hidden="true">&times;</span>
+			        </button>
+			        <h4 class="modal-title">发布议题</h4>
+			    </div>
+		      	<!--填入表单-->
+		      	<div class="modal-body">
+			        <form class="addUserForm">
+			        	<div class="row">
+							<label class="fl">议题名称</label>
+							<input type="text" class="form-control addDiscussionName" aria-label="Text input with segmented dropdown button">
+			        	</div>
+			        	<div class="row">
+							<label class="fl">议题类型</label>
+							<select class="mui-select form-control addDiscussionType" id="inputGroupSelect04" onchange="checkSelect()">
+							   <option selected value="D">德尔菲</option>
+							   <option value="S">SWOT</option>
+							   <option value="C">竞争性假设</option>
+							</select>
+			        	</div>
+			        	<!--德尔菲部分-->
+			        	<div class="row" id="dephilPart">
+							<form class="addDiscussionForm">
+								<div class="mui-row">
+									<label class="fl">问卷名称</label>
+									<select class="mui-select form-control" id="dephilSelect">
+									   <option selected value="">请选择问卷名称</option>
+									   <!--ajaxs插入数据-->
+									</select>
+					        	</div>
+							</form>
+			        	</div>
+			        	<!--SWOT部分-->
+			        	<div class="row" style="display:none;" id="SWOTPart">
+							<form class="addDiscussionForm">
+								<div class="mui-row">
+									<label class="fl">SWOT名称</label>
+									<select class="mui-select form-control" id="SWOTSelect">
+									   <option selected value="">请选择SWOT名称</option>
+									   <!--ajaxs插入数据-->
+									</select>
+					        	</div>
+							</form>
+			        	</div>
+			        	<!--竞争性假设部分-->
+			        	<div class="row" style="display:none;" id="competeHypothesPart">
+							<form class="addDiscussionForm">
+								<div class="mui-row">
+									<label class="fl">假设标题</label>
+									<select class="mui-select form-control" id="competeHypothesSelect">
+									   <option value="">请选择假设标题名称</option>
+									   <!--ajaxs插入数据-->
+									</select>
+					        	</div>
+							</form>
+			        	</div>
+			        </form>
+		      	</div>
+			    <div class="modal-footer">
+			      	<button id="publicTopicDialogSure" type="button" class="btn btn-primary" data-dismiss="modal">确定</button>
+			        <button type="button" class="btn btn-danger" data-dismiss="modal">取消</button>
+			    </div>
+		    </div>
+		  </div>
+		</div>
+		
+		<!--dialog操作信息提示部分-->
+		<div id="alertDialog" class="modal" tabindex="-1" role="dialog">
+		  <div class="modal-dialog" role="document">
+		    <div class="modal-content">
+		      <div class="modal-header">
+		        <h5 class="modal-title">操作信息提示</h5>
+		        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+		          <span aria-hidden="true">&times;</span>
+		        </button>
+		      </div>
+		      <div class="modal-body">
+		        <p class="modalAlert alertLable"></p>
+		      </div>
+		      <div class="modal-footer">
+		        <button type="button" class="btn btn-primary" data-dismiss="modal">关闭</button>
+		      </div>
+		    </div>
+		  </div>
+		</div>
+		<!--dialog操作信息提示部分：带刷新本页面的功能-->
+		<div id="alertDialog1" class="modal" tabindex="-1" role="dialog">
+		  <div class="modal-dialog" role="document">
+		    <div class="modal-content">
+		      <div class="modal-header">
+		        <h5 class="modal-title">操作信息提示</h5>
+		        <button onclick="location.reload()" type="button" class="close" data-dismiss="modal" aria-label="Close">
+		          <span aria-hidden="true">&times;</span>
+		        </button>
+		      </div>
+		      <div class="modal-body">
+		        <p class="modalAlert alertLable1"></p>
+		      </div>
+		      <div class="modal-footer">
+		        <button type="button" onclick="location.reload()" class="btn btn-primary" data-dismiss="modal">关闭</button>
+		      </div>
+		    </div>
+		  </div>
+		</div>
+		
+		<!--dialog群聊部分-->
+		<div id="groupChartDialog" class="modal" tabindex="-1" role="dialog">
+		  <div class="modal-dialog" role="document">
+		    <div class="modal-content">
+		      <!--关闭按钮-->
+		      <div class="modal-header addUserTitle">
+		      	<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+		          <span onclick="closeWs()" aria-hidden="true">&times;</span>
+		        </button>
+		        <h4 class="modal-title">群聊天</h4>
+		      </div>
+		      <!--填入表单-->
+		      <div class="modal-body">
+		        <form class="addUserForm">
+		        	<div class="groupChatBox">
+		        		<div id="groupChatMessageList">
+		    				<!--ajaxs数据插入-->
+		        		</div>
+		        	</div>	
+		        </form>
+		      </div>
+		      <div class="modal-footer">
+		      	<textarea rows="3" class="sendingMessage"></textarea>
+		        <button onclick="closeWs()" type="button" class="btn btn-danger" data-dismiss="modal">关闭</button>
+		        <button onclick="send_msg()" id="groupChartSend" type="button" class="btn btn-primary">发送</button>
+		      </div>
+		    </div>
+		  </div>
+		</div>
+		
+		
+		
+		<script src="js/jquery.js" type="text/javascript" charset="utf-8"></script>
+	  	<script src="js/jquery-1.11.0.js" type="text/javascript" charset="utf-8"></script>
+	  	<script src="./js/bootstrap.min.js" type="text/javascript" charset="utf-8"></script>
+	  	<script src="js/mui.min.js" type="text/javascript" charset="utf-8"></script>
+	  	<script src="js/template-web.js" type="text/javascript" charset="utf-8"></script>
+	  	<script src="js/main.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/echarts.js" type="text/javascript" charset="utf-8"></script>
+		
+		<script src="js/meetinging.js" type="text/javascript" charset="utf-8"></script>
+		
+	</body>
+
+</html>

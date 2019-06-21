@@ -1,0 +1,57 @@
+{
+  "index.html": {
+    "resources": [
+      "css/index.css",
+      "js/jquery-1.11.0.js",
+      "js/mui.min.js",
+      "fonts/mui.ttf",
+      "js/template-web.js",
+      "css/mui.min.css",
+      "css/componments.css",
+      "img/loginBG.png",
+      "js/index.js",
+      "main.html",
+      "mainbody.html",
+      "js/main.js",
+      "css/main.css",
+      "css/mui.css",
+      "css/bootstrap.min.css",
+      "css/font-awesome.css",
+      "js/bootstrap.min.js",
+      "js/jquery.js"
+    ],
+    "refer": [
+      "main.html",
+      "mainbody.html"
+    ]
+  },
+  "main.html": {
+    "resources": [
+      "css/main.css",
+      "css/mui.min.css",
+      "css/componments.css",
+      "index.html"
+    ],
+    "refer": [
+      "index.html"
+    ]
+  },
+  "mainbody.html": {
+    "resources": [
+      "js/main.js",
+      "css/main.css",
+      "css/font-awesome.css",
+      "css/bodymain.css",
+      "js/bootstrap.min.js",
+      "img/logo.png",
+      "css/componments.css",
+      "fonts/fontawesome-webfont.woff2",
+      "js/jquery.js",
+      "css/bootstrap.min.css",
+      "index.html"
+    ],
+    "refer": [
+      "index.html"
+    ]
+  }
+}

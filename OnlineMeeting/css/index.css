@@ -1,0 +1,49 @@
+/*标题部分*/
+.header{
+    background-color: #353848;
+    position: absolute;
+    height: 60px;
+}
+.header .headerTitle h3{
+    font-family: \\5FAE\8F6F\96C5\9ED1;
+    color: #fff;
+    line-height: 45px;
+    background-color: #353848;
+    padding-left: 20px;
+}
+/*背景部分*/
+.loginBackground{
+    height: 667px;
+    width: 100%;    
+    position: relative;
+    background-image: url(../img/loginBG.png);
+}
+.loginBackground .loginForm{
+    width: 330px;
+    position: relative;
+    text-align: center;
+    top: 40%;
+    left: 0;
+    right: 0;
+    margin:0 auto;
+    padding: 20px 20px 50px 20px;
+    background-color: #f1f1f1;
+    border-radius: 5px;
+}
+@media only screen and (min-width: 900px) and (max-width: 1960px) {
+	.loginBackground .loginForm{
+		width: 400px;
+	}
+}
+.loginBackground .loginForm h3{
+    text-align: center;
+    color: #7aa2e6;
+    margin-bottom: 20px;
+}
+.loginForm label,input{
+	font-size: 11px;
+}
+.loginBackground .loginForm button{
+	font-size: 11px;
+}
+

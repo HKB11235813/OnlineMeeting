@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+	<meta charset="utf-8">
+	    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+	    <title>个人中心</title>
+	    <link href="css/mui.min.css" rel="stylesheet"/>
+	    <!--引入共用样式-->
+	    <link rel="stylesheet" type="text/css" href="css/componments.css"/>
+	    <!--引入当前页面的样式-->
+	    <link rel="stylesheet" type="text/css" href="css/personal.css"/>
+	    <link rel="stylesheet" type="text/css" href="css/chatHall.css"/>
+	<body>
+		<header class="mui-bar mui-bar-nav white shaowno header-bg" style="background: linear-gradient(90deg,#1d45a9,#0c1e34); height: 165px;">
+			<a class="goback mui-icon mui-icon-left-nav mui-pull-left" style="color: #fff;" href="mainbody.html" >
+				<span style="font-size: 16px;">返回</span>
+			</a>
+		  	<div class="mui-title pt10">
+		  		<div class="personal-head" id="titleImg"></div>
+	  	  		<div class="titleroleName">
+	  	  			<p class="name"></p>
+	  	  		</div>
+		 	</div>
+		</header>
+		<!--内容主体部分-->
+		<div class="mui-content meetingBody">
+			<h5>正在会议</h5>
+			<div class="head">
+				<ul class="mui-table-view" id="doingMeeting">
+				  <!--ajaxs输入插入-->
+				</ul>
+			</div>
+			<h5>其他会议</h5>
+			<div class="body mt10">
+				<ul class="mui-table-view" id="endingMeeting">
+				  <!--ajaxs输入插入-->
+				</ul>
+			</div>
+			<h5>代开会议</h5>
+			<div class="foot mt10">
+				<ul class="mui-table-view" id="pendingMeeting">
+				  <!--ajaxs输入插入-->
+				</ul>
+			</div>
+		</div>
+		
+		<script src="js/jquery.js" type="text/javascript" charset="utf-8"></script>
+	  	<script src="js/jquery-1.11.0.js" type="text/javascript" charset="utf-8"></script>
+	  	<script src="./js/bootstrap.min.js" type="text/javascript" charset="utf-8"></script>
+	  	<script src="js/mui.min.js" type="text/javascript" charset="utf-8"></script>
+	  	<script src="js/template-web.js" type="text/javascript" charset="utf-8"></script>
+	  	<script src="js/main.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/chatHall.js" type="text/javascript" charset="utf-8"></script>
+	</body>
+</html>

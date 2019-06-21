@@ -1,0 +1,57 @@
+#allMeetingBody .body-content{
+	width: 100%;
+	background: white;
+	margin-top: 30px;
+	overflow-x: hidden;
+	padding-bottom: 80px;
+}
+/*搜索部分*/
+#allMeetingBody .body-content .first-search{
+	font-size: 14px;
+    color: #264495;
+    padding: 3% 2% 0 2%;
+}
+#allMeetingBody .body-content .first-search input{
+	height: 32px;
+	width: 75%;
+}
+#allMeetingBody .body-content .first-search select{
+	height: 32px;
+	width: 75%;
+	border: solid 1px rgba(0, 0, 0, 0.2) !important;
+}
+#allMeetingBody .body-content .first-search label{
+	margin-top: 7px;
+	padding-right: 4px;
+}
+#allMeetingBody .body-content .first-search .search-button{
+	margin-top: 3%;
+	text-align: center;
+}
+#allMeetingBody .body-content .first-search .search-button input{
+	width: 35%;
+}
+#allMeetingBody .body-content .first-search .resetButton{
+	color: #fff;
+	background-color: #28a745;
+	border-color: #28a745;
+}
+
+/*表格部分*/
+#allMeetingBody .body-content .tableForm{
+	margin-top: 8%;
+	padding: 0 5%;
+}
+#allMeetingBody .body-content .tableForm .headerForm th{
+	text-align: center;
+	color: #878d99;
+	font-size: 14px;
+}
+/*分页部分*/
+#allMeetingBody .body-content .formPage{
+	text-align: center;
+}
+#allMeetingBody .body-content .formPage #logLable{
+	font-size: 9px;
+	margin-right: 5px;
+}

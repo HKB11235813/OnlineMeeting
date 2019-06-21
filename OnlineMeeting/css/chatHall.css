@@ -1,0 +1,73 @@
+.meetingHead{
+	text-align: center;
+}
+.personal-head{
+	margin-top: 20px;
+	margin-left: 37%;
+}
+@media only screen and (min-width: 900px) and (max-width: 1960px) {
+	.personal-head{
+		margin-left: 47%;
+	}
+}
+@media only screen and (min-width: 400px) and (max-width: 500px) {
+	.personal-head{
+		margin-left: 40%;
+	}
+}
+@media only screen and (min-width: 500px) and (max-width: 600px) {
+	.personal-head{
+		margin-left: 43%;
+	}
+}
+@media only screen and (min-width: 600px) and (max-width: 700px) {
+	.personal-head{
+		margin-left: 44%;
+	}
+}
+@media only screen and (min-width: 700px) and (max-width: 800px) {
+	.personal-head{
+		margin-left: 45%;
+	}
+}
+@media only screen and (min-width: 800px) and (max-width: 900px) {
+	.personal-head{
+		margin-left: 46%;
+	}
+}
+.personal-head img{
+	border-radius: 50%;
+	width: 75px;
+	height: 75px;
+}
+.titleroleName .name{
+	padding: 10px;
+	color: whitesmoke;
+	font-size: 15px;
+	font-family: "bodoni mt black";
+}
+.groupChatImg{
+	border-radius: 50%;
+	width: 40px;
+	height: 40px;
+}
+.meetingName{
+	font-size: 15px;
+	font-family: "bodoni mt black";
+	margin-left: 15px;
+	position: relative;
+	top: -10px;
+}
+.meetingBody{
+	margin-top: 125px;
+}
+.meetingBody h5{
+	text-align: center;
+	font-size: 15px;
+	font-family: "bodoni mt black";
+	margin: 10px 0;
+	padding: 5px 0;
+}
+#fileClick{
+	display: none;
+}

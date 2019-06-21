@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+	<meta charset="utf-8">
+	    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+	    <title>群聊天室</title>
+	    <link href="css/mui.min.css" rel="stylesheet"/>
+	    <!--引入共用样式-->
+	    <link rel="stylesheet" type="text/css" href="./css/bootstrap.min.css"/>
+		<link rel="stylesheet" type="text/css" href="css/mui.min.css"/>
+		<link rel="stylesheet" type="text/css" href="./css/font-awesome.css"/>		
+		<link rel="stylesheet" type="text/css" href="./css/componments.css"/>
+	    <!--引入当前页面的样式-->
+	    <link rel="stylesheet" type="text/css" href="css/personal.css"/>
+	    <link rel="stylesheet" type="text/css" href="css/chatHall.css"/>
+	    <link rel="stylesheet" type="text/css" href="css/groupChat.css"/>
+	<body>
+		<header class="mui-bar mui-bar-nav white header-bg" style="background: linear-gradient(90deg,#1d45a9,#0c1e34); height: 165px;">
+			<a onclick="closeWs()" class="goback mui-icon mui-icon-left-nav mui-pull-left" style="color: #fff;" href="chatHall.html" >
+				<span style="font-size: 16px;">返回</span>
+			</a>
+		  	<div class="mui-title pt10">
+		  		<div class="personal-head" id="titleImg"></div>
+	  	  		<div class="titleroleName">
+	  	  			<p class="name"></p>
+	  	  		</div>
+		 	</div>
+		</header>
+	
+		<!--内容主体部分-->
+		<div class="meetingBody">
+		      <!--填入表单-->
+		      <div class="modal-body">
+		        <form>
+		        	<div class="groupChatBox">
+		        		<div id="groupChatMessageList">
+		    				<!--ajaxs数据插入-->
+		        		</div>
+		        	</div>
+		        </form>
+		      </div>
+		      <div class="foot">
+		      	<textarea rows="3" class="sendingMessage"></textarea>
+		        <button onclick="send_msg()" id="groupChartSend" type="button" class="btn btn-primary">发送</button>
+		      </div>
+		</div>
+		
+		<script src="js/jquery.js" type="text/javascript" charset="utf-8"></script>
+	  	<script src="js/jquery-1.11.0.js" type="text/javascript" charset="utf-8"></script>
+	  	<script src="./js/bootstrap.min.js" type="text/javascript" charset="utf-8"></script>
+	  	<script src="js/mui.min.js" type="text/javascript" charset="utf-8"></script>
+	  	<script src="js/template-web.js" type="text/javascript" charset="utf-8"></script>
+	  	<script src="js/main.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/groupChat.js" type="text/javascript" charset="utf-8"></script>
+	</body>
+</html>
